@@ -10,6 +10,7 @@ const zongji = new ZongJi({
 
 zongji.on('binlog', function(evt) {
   evt.dump();
+  if (evt.tableId == 108) console.log(zongji.tableMap[108]);
 });
 
 zongji.start({
